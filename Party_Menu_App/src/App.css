@@ -1,0 +1,165 @@
+/* General Layout */
+.app-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tabs button {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #333;
+  color: #fff;
+}
+
+/* Search */
+.filters input[type="text"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Dish List */
+.dish-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.dish-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: #fff;
+  transition: 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.dish-card.selected {
+  border: 2px solid green;
+  box-shadow: 0 2px 8px rgba(0,128,0,0.3);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.dish-card h3 {
+  margin: 5px 0;
+}
+
+.dish-card button {
+  margin-right: 8px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dish-card button:first-of-type {
+  background: #007bff;
+  color: #fff;
+}
+
+.dish-card button:first-of-type:hover {
+  background: #0056b3;
+}
+
+.dish-card button:last-of-type {
+  background: #f0ad4e;
+  color: #fff;
+}
+
+.dish-card button:last-of-type:hover {
+  background: #d68a1e;
+}
+
+/* Summary */
+.summary {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.continue-btn {
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.continue-btn:hover {
+  background: darkorange;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  text-align: left;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background: #dc3545;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #a71d2a;
+}
